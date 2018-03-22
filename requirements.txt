@@ -1,2 +1,7 @@
 pymodm
 flask
+jsonschema
+numpy
+pytest
+pytest -pep8
+gunicorn
