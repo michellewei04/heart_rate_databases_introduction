@@ -66,7 +66,7 @@ def get_hr(user_email):
 def get_avg_hr(user_email):
     if not validate_email_format(user_email):
         res = {
-             "Message": "Email ({0}) is not in valid format".format(user_email)
+            "Message": "Email ({0}) is not in valid format".format(user_email)
         }
         code = 400
     elif not check_user_exists(user_email):
