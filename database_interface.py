@@ -28,10 +28,10 @@ def add_hr(email, heart_rate):
 
 
 def create_user(email, age, heart_rate):
-    u = models.User(email, age, [heart_rate], [datetime.datetime.now()])  # create a new User instance
+    user = models.User(email, age, [heart_rate], [datetime.datetime.now()])  # create a new User instance
     # u.heart_rate.append(heart_rate)  # add initial heart rate
     # u.heart_rate_times.append(datetime.datetime.now())  # add initial heart rate time
-    u.save()  # save the user to the database
+    user.save()  # save the user to the database
 
 
 def get_hr_and_time(email):
