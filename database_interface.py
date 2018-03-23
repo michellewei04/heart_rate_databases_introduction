@@ -41,7 +41,7 @@ def add_hr(email, heart_rate):
     """
     user = models.User.objects.raw({"_id": email}).first()  # Get the first user where _id=email
     user.heart_rate.append(heart_rate)  # Append the heart_rate to the user's list of heart rates
-    user.heart_rate_times.append(datetime.datetime.now())  # append the current time to the user's list of heart rate times
+    user.heart_rate_times.append(datetime.datetime.now())  # append the current time to the user's list of hr times
     user.save()  # save the user to the database
 
 
@@ -117,6 +117,7 @@ def calc_avg_for_interval(email, time_since):
 
 # if __name__ == "__main__":
 #     # connect("mongodb://localhost:27017/heart_rate_app") # open up connection to db
-#     create_user(email="suyash@suyashkumar.com", age=24, heart_rate=60)  # we should only do this once, otherwise will overwrite existing user
+#     create_user(email="suyash@suyashkumar.com", age=24, heart_rate=60)
+#     # we should only do this once, otherwise will overwrite existing user
 #     add_hr("suyash@suyashkumar.com", 60, datetime.datetime.now())
 #     print_user("suyash@suyashkumar.com")

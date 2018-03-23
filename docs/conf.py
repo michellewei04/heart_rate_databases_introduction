@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.abspath('..'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'michellewei-heart-rate-databases-introduction'
+project = 'heart_rate_databases_introduction'
 copyright = '2018, Michelle Wei'
 author = 'Michelle Wei'
 
@@ -102,7 +102,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'michellewei-heart-rate-databases-introductiondoc'
+htmlhelp_basename = 'heart_rate_databases_introductiondoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -129,7 +129,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'michellewei-heart-rate-databases-introduction.tex', 'michellewei-heart-rate-databases-introduction Documentation',
+    (master_doc, 'heart_rate_databases_introduction.tex', 'heart\\_rate\\_databases\\_introduction Documentation',
      'Michelle Wei', 'manual'),
 ]
 
@@ -139,7 +139,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'michellewei-heart-rate-databases-introduction', 'michellewei-heart-rate-databases-introduction Documentation',
+    (master_doc, 'heart_rate_databases_introduction', 'heart_rate_databases_introduction Documentation',
      [author], 1)
 ]
 
@@ -150,8 +150,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'michellewei-heart-rate-databases-introduction', 'michellewei-heart-rate-databases-introduction Documentation',
-     author, 'michellewei-heart-rate-databases-introduction', 'One line description of project.',
+    (master_doc, 'heart_rate_databases_introduction', 'heart_rate_databases_introduction Documentation',
+     author, 'heart_rate_databases_introduction', 'One line description of project.',
      'Miscellaneous'),
 ]
 
