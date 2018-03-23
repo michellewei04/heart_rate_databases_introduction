@@ -1,5 +1,5 @@
 pymodm
-flask
+Flask
 jsonschema
 numpy
 pytest
