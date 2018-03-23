@@ -12,11 +12,11 @@ Description: This is a web service for handling heart rate data. It uses a Mongo
 ## Instructions
 
 Before using, make sure MongoDB and Docker are installed. Launch the database on your local machine:
-```python
+```
 docker run -v $PWD/db:/data/db -p 127.0.0.1:27017:27017 mongo
 ```
 Run the server:
-```python
+```
 gunicorn --bind 0.0.0.0:5000 main:app
 ```
 
@@ -40,7 +40,7 @@ The database hold users emails, age, heart rates, and the time of heart rate mea
     "heart_rate_average_since": "2018-03-09 11:00:36.372339" // date string
 }
 ```
-in which `heart_rate_average_since` must be in the format `YYYY-MM-DD HH:MM:SS.ssssss
+in which `heart_rate_average_since` must be in the format `YYYY-MM-DD HH:MM:SS.ssssss`
   * This will also notify you in `"messages"` if the average heart rate is tachychardic for the user's age
   
 
