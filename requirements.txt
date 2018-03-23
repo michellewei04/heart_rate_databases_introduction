@@ -1,5 +1,5 @@
 flask
-# pymodm
+pymodm
 jsonschema
 numpy
 pytest
