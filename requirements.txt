@@ -1,6 +1,5 @@
 pymodm
 Flask
-jsonschema
 numpy
 pytest
 pytest -pep8
