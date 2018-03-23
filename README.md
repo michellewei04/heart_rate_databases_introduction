@@ -1,8 +1,11 @@
 # Heart rate database and web server
 
 [![Build Status](https://travis-ci.org/michellewei04/heart_rate_databases_introduction.svg?branch=master)](https://travis-ci.org/michellewei04/heart_rate_databases_introduction)
+[![Documentation Status](https://readthedocs.org/projects/michellewei-heart-rate-databases-introduction/badge/?version=latest)](http://michellewei-heart-rate-databases-introduction.readthedocs.io/en/latest/?badge=latest)
 
-Contributors: Michelle Wei
+__Contributors:__ Michelle Wei
+
+__Documentation:__ [readthedocs.org](http://michellewei-heart-rate-databases-introduction.readthedocs.io/en/latest/)
 
 Description: This is a web service for handling heart rate data. It uses a MongoDB database running in a Docker container
 

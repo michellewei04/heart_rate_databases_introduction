@@ -14,7 +14,7 @@ def post_user():
     email = r["user_email"]
     if not validate_email_format(email):
         res = {
-             "Message": "Email ({0}) is not in valid format".format(email)
+            "Message": "Email ({0}) is not in valid format".format(email)
         }
         code = 400
     elif not validate_hr_input(r):
@@ -38,7 +38,7 @@ def post_user():
 def get_hr(user_email):
     if not validate_email_format(user_email):
         res = {
-             "Message": "Email ({0}) is not in valid format".format(user_email)
+            "Message": "Email ({0}) is not in valid format".format(user_email)
         }
         code = 400
     elif not check_user_exists(user_email):
