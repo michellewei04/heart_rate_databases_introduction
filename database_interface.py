@@ -13,6 +13,13 @@ def update_user(email, age, heart_rate):
         add_hr(email, heart_rate)
 
 
+def check_user_exists(email):
+    if models.User.objects.raw({"_id": email}).count() == 0:
+        return False
+    else:
+        return True
+
+
 def add_hr(email, heart_rate):
     user = models.User.objects.raw({"_id": email}).first()  # Get the first user where _id=email
     user.heart_rate.append(heart_rate)  # Append the heart_rate to the user's list of heart rates
@@ -68,9 +75,9 @@ def calc_avg_for_interval(email, time_since):
     return avg_hr
 
 
-def clear_user(email):
-    user = models.User.objects.raw({"_id": email}).first()
-    user.delete()
+# def clear_user(email):
+#     user = models.User.objects.raw({"_id": email}).first()
+#     user.delete()
 
 
 def print_user(email):
