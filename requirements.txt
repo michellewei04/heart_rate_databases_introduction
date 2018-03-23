@@ -1,5 +1,6 @@
-pymodm
-Flask
+flask
+# pymodm
+jsonschema
 numpy
 pytest
 pytest -pep8
