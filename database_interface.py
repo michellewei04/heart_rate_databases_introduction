@@ -8,9 +8,9 @@ connect("mongodb://localhost:27017/heart_rate_app")  # open up connection to db
 
 def update_user(email, age, heart_rate):
     if models.User.objects.raw({"_id": email}).count() == 0:
-        create_user(email, age, [heart_rate])
+        create_user(email, age, heart_rate)
     else:
-        add_hr(email, [heart_rate])
+        add_hr(email, heart_rate)
 
 
 def add_hr(email, heart_rate):
@@ -21,9 +21,9 @@ def add_hr(email, heart_rate):
 
 
 def create_user(email, age, heart_rate):
-    u = models.User(email, age, [], [])  # create a new User instance
-    u.heart_rate.append(heart_rate)  # add initial heart rate
-    u.heart_rate_times.append(datetime.datetime.now())  # add initial heart rate time
+    u = models.User(email, age, [heart_rate], [datetime.datetime.now()])  # create a new User instance
+    # u.heart_rate.append(heart_rate)  # add initial heart rate
+    # u.heart_rate_times.append(datetime.datetime.now())  # add initial heart rate time
     u.save()  # save the user to the database
 
 
@@ -37,20 +37,19 @@ def get_hr_and_time(email):
 
 def check_tachy(email, avg_hr):
     user = models.User.objects.raw({"_id": email}).first()
-    hr = user.heart_rate
     age = user.age
 
-    if age <= 2 & avg_hr > 151:
+    if age <= 2 and avg_hr > 151:
         tachy = True
-    elif age >= 3 & age <= 4 & avg_hr > 137:
+    elif age in range(3, 5) and avg_hr > 137:
         tachy = True
-    elif age >= 5 & age <= 7 & avg_hr > 133:
+    elif age in range(5, 8) and avg_hr > 133:
         tachy = True
-    elif age >= 8 & age <= 11 & avg_hr > 130:
+    elif age in range(8, 12) and avg_hr > 130:
         tachy = True
-    elif age >= 12 & age <= 15 & avg_hr > 119:
+    elif age in range(12, 16) and avg_hr > 119:
         tachy = True
-    elif age >= 6 & avg_hr > 100:
+    elif age >= 6 and avg_hr > 100:
         tachy = True
     else:
         tachy = False
@@ -67,6 +66,11 @@ def calc_avg_for_interval(email, time_since):
             new_hr.append(hr[i])
     avg_hr = mean(new_hr)
     return avg_hr
+
+
+def clear_user(email):
+    user = models.User.objects.raw({"_id": email}).first()
+    user.delete()
 
 
 def print_user(email):
