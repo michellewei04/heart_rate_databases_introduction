@@ -9,6 +9,7 @@ from validation import validate_email_format, validate_hr_input, validate_date_t
 app = Flask(__name__)
 CORS(app)
 
+
 @app.route("/api/heart_rate", methods=["POST"])
 def post_user():
     r = request.get_json()
