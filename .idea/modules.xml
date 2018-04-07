@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/heart_rate_databases_introduction.iml" filepath="$PROJECT_DIR$/.idea/heart_rate_databases_introduction.iml" />
+      <module fileurl="file://$USER_HOME$/React_heart_rate/doctor-hr-frontend/.idea/react_heart_rate_db.iml" filepath="$USER_HOME$/React_heart_rate/doctor-hr-frontend/.idea/react_heart_rate_db.iml" />
     </modules>
   </component>
 </project>
