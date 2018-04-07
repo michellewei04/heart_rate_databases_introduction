@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 import models
 from database_interface import update_user, check_tachy, calc_avg_for_interval, check_user_exists
 from numpy import mean
@@ -6,7 +7,7 @@ import datetime
 from validation import validate_email_format, validate_hr_input, validate_date_time_input
 
 app = Flask(__name__)
-
+CORS(app)
 
 @app.route("/api/heart_rate", methods=["POST"])
 def post_user():
